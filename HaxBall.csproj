@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="Assets\Player\Kicking.cs" />
     <Compile Include="Assets\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\ScalableCamera.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
