@@ -9,7 +9,7 @@ public class Kicking : MonoBehaviour
     private CircleCollider2D ballColider;
     private Rigidbody2D ballBody;
   
-    private int lastShot = 0;
+ 
     int counter = 0;
 
     void Start()
@@ -32,7 +32,7 @@ public class Kicking : MonoBehaviour
 
             print("space key was pressed");
 
-            lastShot = Time.frameCount;
+           
             Vector2 v = ballBody.gameObject.transform.position - transform.position;
             v = v / v.magnitude;
             v = v * power * 100;
