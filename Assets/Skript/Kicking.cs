@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class Kicking : MonoBehaviour
+public class Kicking : NetworkBehaviour
 {
     public float power = 20f;
 
@@ -25,14 +26,21 @@ public class Kicking : MonoBehaviour
 
     void FixedUpdate()
     {
+        kick();
+   
+    }
+
+    [Command]
+    void  kick()
+    {
         if (Input.GetKeyDown("space")
 
-            && colider.IsTouching(ballColider))
-             {
+       && colider.IsTouching(ballColider))
+        {
 
             print("space key was pressed");
 
-           
+
             Vector2 v = ballBody.gameObject.transform.position - transform.position;
             v = v / v.magnitude;
             v = v * power * 100;
